@@ -9,6 +9,7 @@ import javax.validation.Valid;
 
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +21,7 @@ import com.api.demo.microservices.details.microservicesdetails.models.MicroServi
 import com.api.demo.microservices.details.microservicesdetails.models.MicroServicesDetails;
 import com.api.demo.microservices.details.microservicesdetails.repositories.MicroServiceRepository;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/microservice/details")
 public class MicroServicesDetailsController {
